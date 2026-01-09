@@ -122,6 +122,11 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid white;
+    transition: transform 0.8s ease;    /*smooth rotation*/
+}
+
+.profile-pic:hover {
+    transform: rotate(360deg);
 }
 
 /* Contact Icons */
