@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Anirudh | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar second-color">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me -->
+    <section id="about" class="section first-color">
+        <div class = "profile-container">
+            <img src="Anirudh.jpeg" alt="Anirudh's Image" class="profile-pic"> 
+        </div>
+
+        <h1>About Me</h1>
+        <p id="typing-text"></p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section second-color">
+        <h1>My Projects</h1>
+
+        <div class="card">
+            <h3>URL Shortener</h3>
+            <p>Built using React, Node.js, and MongoDB.</p>
+        </div>
+
+        <div class="card">
+            <h3>Algorithmic Trading Simulator</h3>
+            <p>Simulates trading strategies using historical data.</p>
+        </div>
+
+        <div class="card">
+            <h3>Search Engine</h3>
+            <p>High-performance text search similar to PDF readers.</p>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section third-color">
+        <h1>Experience</h1>
+
+        <div class="card">
+            <h3>Software Engineering Intern – Microsoft</h3>
+            <p>
+                Worked on Azure Networking tools and internal platforms.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Placement & Internship Cell – IIT Delhi</h3>
+            <p>
+                Corporate interaction, data analysis, and student coordination.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section fourth-color">
+        <h1>Contact Me</h1>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Javascript -->
+    <script>
+        const text = "Hi, I’m Anirudh. I am a final-year student with strong interest in Software Development, Data Analysis, and Problem Solving. I enjoy building scalable systems and learning new technologies.";
+
+        let index = 0;
+        const speed = 50;               // typing speed in ms(miliseconds)
+
+        function typeEffect(){          // creating function for type effect on the landing web-page
+            if (index < text.length){
+                document.getElementById("typing-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect,speed);
+            }
+        } 
+
+        window.onload = typeEffect;
+
+    </script>
+</body>
+</html>
