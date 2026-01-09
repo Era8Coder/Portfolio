@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Anirudh | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
@@ -32,19 +33,21 @@
     <section id="projects" class="section second-color">
         <h1>My Projects</h1>
 
-        <div class="card">
-            <h3>URL Shortener</h3>
-            <p>Built using React, Node.js, and MongoDB.</p>
-        </div>
+        <div class = "projects-container">
+            <div class="project-card left">
+                <h3>URL Shortener</h3>
+                <p>Built using React, Node.js, and MongoDB.</p>
+            </div>
 
-        <div class="card">
-            <h3>Algorithmic Trading Simulator</h3>
-            <p>Simulates trading strategies using historical data.</p>
-        </div>
+            <div class="project-card right">
+                <h3>Algorithmic Trading Simulator</h3>
+                <p>Simulates trading strategies using historical data.</p>
+            </div>
 
-        <div class="card">
-            <h3>Search Engine</h3>
-            <p>High-performance text search similar to PDF readers.</p>
+            <div class="project-card left">
+                <h3>Search Engine</h3>
+                <p>High-performance text search similar to PDF readers.</p>
+            </div>
         </div>
     </section>
 
@@ -52,36 +55,49 @@
     <section id="experience" class="section third-color">
         <h1>Experience</h1>
 
-        <div class="card">
-            <h3>Software Engineering Intern – Microsoft</h3>
-            <p>
-                Worked on Azure Networking tools and internal platforms.
-            </p>
-        </div>
+        <div class="projects-container">
+            <div class="project-card left">
+                <h3>Software Engineering Intern – Microsoft</h3>
+                <p>
+                    Worked on Azure Networking tools and internal platforms.
+                </p>
+            </div>
 
-        <div class="card">
-            <h3>Placement & Internship Cell – IIT Delhi</h3>
-            <p>
-                Corporate interaction, data analysis, and student coordination.
-            </p>
+            <div class="project-card right">
+                <h3>Placement & Internship Cell – IIT Delhi</h3>
+                <p>
+                    Corporate interaction, data analysis, and student coordination.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section fourth-color">
+    <section id="contact" class="section fourth-color small-section">
         <h1>Contact Me</h1>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Your Email" />
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-links">
+            <a href = "mailto:anirudhyadavallen@gmail.com" target = "_blank" aria-label="Email">                  <!-- target blank implies that we will not leave the webpage -->
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href = "https://www.linkedin.com/in/anirudh-yadav-16a409252/" target = "_blank" aria-label="LinkedIn"> 
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/Era8Coder" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.instagram.com/thi_is_anniii_/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </section>
 
     <!-- Javascript -->
     <script>
-        const text = "Hi, I’m Anirudh. I am a final-year student with strong interest in Software Development, Data Analysis, and Problem Solving. I enjoy building scalable systems and learning new technologies.";
+        const text = "I am a tech enthusiast from Jaipur, the Pink City, who enjoys connecting with new people and learning from diverse experiences. Currently, I am an undergraduate student at IIT Delhi, driven by the desire to explore my full potential while contributing positively to society and the nation. I am pursuing a degree in Electrical Engineering and hold a strong academic and practical interest in the field, aiming to make meaningful contributions through technology and innovation. Beyond academics, I am a versatile individual with a passion for poetry, badminton, and mathematics, particularly numerical reasoning and inequalities, along with a deep love for cricket and exploring new cuisines. Above all, I believe in helping others and find purpose in offering support and solutions whenever possible.";
 
         let index = 0;
         const speed = 50;               // typing speed in ms(miliseconds)

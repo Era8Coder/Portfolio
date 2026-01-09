@@ -104,6 +104,11 @@ body {
     border-radius: 5px;
 }
 
+.small-section {                        /* To reduce the size of the contact me section */
+    min-height: auto;
+    padding: 60px 10% 80px;
+}
+
 /* Profile Image */
 .profile-container {
     display: flex;
@@ -117,4 +122,59 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid white;
+}
+
+/* Contact Icons */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-links a {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    background: white;
+    color: #1f6f78;
+    transform: scale(1.1);
+}
+
+/* Projects Layout */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Common project card */
+.project-card {
+    width: 60%;
+    padding: 25px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Left aligned */
+.project-card.left {
+    align-self: flex-start;
+}
+
+/* Right aligned */
+.project-card.right {
+    align-self: flex-end;
+    text-align: right;
 }
