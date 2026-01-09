@@ -50,11 +50,11 @@ body {
     margin: 0 20px;
 }
 
-.navbar a {
+/* .navbar a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
+} */
 
 /* Sections */
 .section {
@@ -178,3 +178,40 @@ body {
     align-self: flex-end;
     text-align: right;
 }
+
+/* Animated underline effect under the text for navigation */
+.navbar a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Gap between h3 heading and text */
+.project-card h3 {
+    display: inline-block;      /* underline fits text width */
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid white;
+}
+
+.project-card p {
+    margin-top: 0;         /* optional: remove extra default space */
+}
+
