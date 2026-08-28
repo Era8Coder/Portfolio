@@ -42,39 +42,33 @@ navLinks.querySelectorAll("a").forEach((link) => {
         navLinks.classList.remove("open");
     })
 })
-
-/* ------ Hero Rotating Role Text ------ */ 
+/* ---------- Hero: rotating role text ---------- */
 const roles = [
-    "POET",
-    "MATH LOVER",
-    "BADMINON PLAYER",
-    "FOODIE",
-    "ELECTRICAL ENGINEER",
-    "CRICKET FAN AND PLAYER",
-    "MOVIE LOVER",
-    "SPIDER MAN FAN",
-    "UNIVERSE <3",
     "SOFTWARE ENGINEER",
+    "POET",
+    "BADMINTON PLAYER",
+    "PROBLEM SOLVER",
+    "CRICKET FAN AND PLAYER",
+    "FOODIE",
+    "MATH LOVER",
+    "ELECTRICAL ENGINEER",
+    "TECH ENTHUSIAST",
 ];
 const roleEl = document.getElementById("hero-role");
 let roleIndex = 0, charIndex = 0, deleting = false;
 
-function typeRole () {
+function typeRole() {
     const current = roles[roleIndex];
-    if (!deleting)
-    {
-        roleEl.innerHTML = current.slice(0, ++charIndex) + '<span class = "cursor-blink>_</span>';
-        if (charIndex === current.length)
-        {
+    if (!deleting) {
+        roleEl.innerHTML = current.slice(0, ++charIndex) + '<span class="cursor-blink">_</span>';
+        if (charIndex === current.length) {
             deleting = true;
             return setTimeout(typeRole, 1600);
         }
     } else {
-        roleEl.innerHTML = current.slice (0, --charIndex) + '<span class = "cursor-blink>_</span>';
-        if (charIndex === 0)
-        {
+        roleEl.innerHTML = current.slice(0, --charIndex) + '<span class="cursor-blink">_</span>';
+        if (charIndex === 0) {
             deleting = false;
-            roleIndex = false;
             roleIndex = (roleIndex + 1) % roles.length;
         }
     }
